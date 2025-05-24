@@ -62,15 +62,23 @@ translate([0,-30,0]) {
 		difference() {
 			roundedcube([179,11,35], false, 1, "y");
 			// evidage
-			translate([2,2,2]) {
+			translate([2,1.5,2]) {
 				cube([179-4,11,35-4]);
 			};
 			// trou button
 			translate([179-15,-1, 35-5-11/2]) {
 				rotate([-90,0,0]) {
-					cylinder(4,11/2,11/2);
+					cylinder(4,11.5/2,11.5/2);
 				};
 			};
+			// trou encoche gauche et droite
+			translate([9, 4.5, 1.8]) {
+				cube([30, 7, 2.2]);
+			};
+			translate([179-9-14, 4.5, 1.8]) {
+				cube([16, 7, 2.2]);
+			};
+
 			// trou micro / casque
 			translate([179-40, -1, 24]) {
 				rotate([-90,0,0]) {
@@ -84,15 +92,15 @@ translate([0,-30,0]) {
 			};
 
 			// USB
-			translate([105,-1,22]) {
+			translate([106,-1,22]) {
 				cube([10,4,5]);
 			};
-			translate([86,-1,21]) {
-				cube([13,4,6]);
+			translate([86,-1,20]) {
+				cube([16,4,7]);
 			};
 
 			// trou GPU
-			translate([179-58-25, 11-1,-4]) {
+			translate([179-58-25, 11-2,-4]) {
 				cube([58,5,12]);
 			};
 
@@ -137,15 +145,15 @@ translate([0,-30,0]) {
 		
 		// bouton
 		translate([179-15,0, 35-5-11/2]) {
-			translate([6 ,2,-3]) {
-				cube([3,5,6]);
-				translate([-6,4,0]) {
-					cube([9,1,6]);
+			translate([6 ,1,-3]) {
+				cube([3,6,6]);
+				translate([-6,6.,0]) {
+					cube([9,.6,6]);
 				}
 			};
 			rotate([-90,0,0]) {
 				cylinder(2,5,5);
-				cylinder(11,3,3,$fn=8);
+				cylinder(12,3,3,$fn=8);
 			};
 		};
 		
@@ -159,8 +167,8 @@ translate([0,-30,0]) {
 			translate([2,8,2]) {
 				cube([40,3,3]);
 			};
-			translate([9, 6, 2]) {
-				cube([30, 7, 2]);
+			translate([9, 6, 1.8]) {
+				cube([30, 7, 2.2]);
 			};
 		};
 		// encoche de droite
@@ -168,12 +176,12 @@ translate([0,-30,0]) {
 			translate([179-2-23,8,2]) {
 				cube([20,3,3]);
 			};
-			translate([179-9-12, 6, 2]) {
-				cube([12, 7, 2]);
+			translate([179-9-14, 6, 2]) {
+				cube([16, 7, 2]);
 			};
 		};
 		// atache
-		translate([3,2,35-2-1-7]) {
+		translate([3,1,35-2-1-7]) {
 			cube([2,16,7]);
 			translate([-.5,12.4,0]) {
 				rotate([0,0,180]) {
@@ -183,7 +191,7 @@ translate([0,-30,0]) {
 				};
 			};
 		};
-		translate([179-3-2,2,35-2-1-7]) {
+		translate([179-3-2,1,35-2-1-7]) {
 			cube([2,16,7]);
 			translate([2.5,12.4,0]) {
 				scale([1,2,1]) {
