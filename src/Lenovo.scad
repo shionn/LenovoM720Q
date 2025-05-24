@@ -1,7 +1,7 @@
 include <roundedcube.scad>
 
 // Case TOP
-/*union() {
+union() {
 	// Base
 	difference() {
 		//cube([179, 170, 14]);
@@ -24,13 +24,14 @@ include <roundedcube.scad>
 			cube([20, 5, 2]);
 		};
 		// GPU passé de 57 a 58 apres le premier proto
-		translate([179-58-25,-1,-1]) {
-			cube([58,112,12]);
+		// passer a 57.5 apres le second
+		translate([96,-1,-1]) {
+			cube([57.5,112,12]);
 		};
 		// vis GPU
 		translate([179+1, 170-8, 8]) {
 			rotate([0, -90, 0]) {
-				cylinder(4, 1.5, 1.5,$fn=8);
+				cylinder(4, 2, 2,$fn=8);
 			}
 		};
 	};
@@ -60,7 +61,7 @@ include <roundedcube.scad>
 translate([0,-30,0]) {
 	union() {
 		difference() {
-			roundedcube([179,11,35], false, 1, "y");
+			roundedcube([179,11,35], false, 1, "ymin");
 			// evidage
 			translate([2,1.5,2]) {
 				cube([179-4,11,35-4]);
@@ -182,7 +183,7 @@ translate([0,-30,0]) {
 		};
 		// atache
 		translate([3,1,35-2-1-7]) {
-			cube([2,16,7]);
+			cube([2,14,7]);
 			translate([-.5,12.4,0]) {
 				rotate([0,0,180]) {
 					scale([1,2,1]) {
@@ -192,7 +193,7 @@ translate([0,-30,0]) {
 			};
 		};
 		translate([179-3-2,1,35-2-1-7]) {
-			cube([2,16,7]);
+			cube([2,14,7]);
 			translate([2.5,12.4,0]) {
 				scale([1,2,1]) {
 					cylinder(7,1,1, $fn=3);

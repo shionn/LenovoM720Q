@@ -7,7 +7,7 @@ TODO indroduire une photo du résultat
 
 ## Description. 
 
-Le support du GPU est une version modifier de celui de (ITGGear)[https://www.printables.com/model/1053116-lenovo-m920qm720q-xfx-rx-6400-ventilation-3d-case]. 
+Le support du GPU est une version modifié de celui de [ITG Gear](https://www.printables.com/model/1053116-lenovo-m920qm720q-xfx-rx-6400-ventilation-3d-case).
 
 Le panneau superieur et frontal on ete entierement dessiné sur openscad. 
 
