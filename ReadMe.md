@@ -3,8 +3,8 @@
 
 Mon projet pour introduire une RX6400 de Sapphire dans un lenovo M720Q. Si vous voulez faire pareil, priviligier le modele de XFX. 
 
-![Photo du rendu](img/01.jpg)
-![Comparaison taille manette](img/01.jpg)
+![Photo du rendu](https://github.com/shionn/LenovoM720Q/img/01.jpg)
+![Comparaison taille manette](https://github.com/shionn/LenovoM720Q/img/01.jpg)
 
 ## Description. 
 
