@@ -9,6 +9,7 @@ difference() {
 	cube([base_w,base_l,base_h]);
 	pc_hole();
 	pc_hole_side();
+	pc_hole_foot();
 	base_round();
 	foot_round();
 	led_ruban();
@@ -24,17 +25,29 @@ module pc_hole() {
 module pc_hole_side() {
 	r_y=20;
 	r_z=10;
+	x = base_w/2;
 	
-	translate([0,10+r_y,base_h-10])
+	
+	translate([x,10+r_y,base_h-10])
 		cube([base_w, base_l-10*2-r_y*2, 20]);
-	translate([0,10+r_y,base_h])
+	translate([x,10+r_y,base_h])
 		rotate([0,90,0])
 			scale([r_z,r_y,1]) 
 				cylinder(base_w, 1, 1, $fn=32);
-	translate([0,base_l-10-r_y,base_h])
+	translate([x,base_l-10-r_y,base_h])
 		rotate([0,90,0])
 			scale([r_z,r_y,1]) 
 				cylinder(base_w, 1, 1, $fn=32);
+}
+
+module pc_hole_foot() {
+	w = 1.5;
+	l=17;
+	dist = 117;
+	translate([base_w/2-pc_w/2-w,base_l/2-dist/2-l,base_h-20])
+		cube([w+1,l,30]);
+	translate([base_w/2-pc_w/2-w,base_l/2+dist/2,base_h-20])
+		cube([w+1,l,30]);
 }
 
 module base_round() {
@@ -85,5 +98,4 @@ module led_controler() {
 }
 
 color("red") {
-		
 }
