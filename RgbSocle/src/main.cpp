@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 
-#define LED_LEN 4
+#define LED_LEN 12
 #define LED_PIN DD0
 #define BREATH_SPEED 2048
 #define CRAWL_SPEED 128
